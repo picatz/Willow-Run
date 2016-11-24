@@ -1,9 +1,7 @@
 module WillowRun
-
-  class Status 
+	class Status 
     def initialzie
       # do things  
     end
   end
-
 end
