@@ -1,9 +1,12 @@
 require "willow_run/airport"
+require "willow_run/access_point"
 require "willow_run/scanner"
 require "willow_run/parser"
 require "willow_run/errors"
 require "willow_run/version"
 require 'pry'
+require 'ostruct'
+require 'plist'
 require 'open3'
 require 'nokogiri'
 
