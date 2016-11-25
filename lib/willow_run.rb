@@ -1,10 +1,16 @@
 require 'ostruct'
 require 'plist'
 require 'open3'
+require 'socket'
+require 'packetfu'
+require 'plist'
+require 'ipaddr'
+require 'pry'
 require "willow_run/airport"
 require "willow_run/access_point"
 require "willow_run/generate_psk"
 require "willow_run/scanner"
+require "willow_run/sniffer"
 require "willow_run/parser"
 require "willow_run/status"
 require "willow_run/errors"
@@ -37,7 +43,6 @@ module WillowRun
   def self.disassociate
     unless Process.uid == 0
       o, s = Open3.capture2("#{AIRPORT} -z")
-      #binding.pry
       unless o == "root required to disassociate\n"
         return true
       end

@@ -13,19 +13,18 @@ module WillowRun
     end
 
     def scan(ssid="")
-      o, s = Open3.capture2("#{WillowRun::AIRPORT} -x -s #{ssid}")
+      o, s = Open3.capture2("#{AIRPORT} -x -s '#{ssid}'")
       manage_output(o, s)
     end 
 
     def manage_output(stdout, status)
       if status.success?
-        Parser.new(stdout)
+        Parser.new.parse(stdout)
       else
         # custom error?
         false
       end 
     end
   end
-
 
 end
