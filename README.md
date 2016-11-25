@@ -1,6 +1,7 @@
 # Willow Run ✈️ 
 
 ⚠️  Still in development! Should have working tests though!
+⚠️  Note: I've learned that `airport` sometimes dosen't handle BSSID properly.
 
 Willow Run is a Ruby API to the macOs/OSX `airport` command. The [airport](http://osxdaily.com/2007/01/18/airport-the-little-known-command-line-wireless-utility/) command manages 802.11 interfaces, can perform wireless broadcast scans ( with xml output support ), set arbitrary channels on the interface, and even generate PSKs from specified pass phrase and SSIDs -- all from the command-line, which I really love. 
 
@@ -10,7 +11,7 @@ It will be  a [gem](https://rubygems.org/)! So, you'll be able to install it you
 
     $ gem install willow_run
 
-## Purpoe
+## Purpose
 This gem takes those capabilities provided by the `airpot` command and provides a Ruby API to be able use these functionalities in an [OO](https://en.wikipedia.org/wiki/Object-oriented_programming) manner, which I also really love. This provides better flexibility to build tools ontop of this tool; and can provide greater functionality for scripting or creating applications around various wireless taks this utility provides on macOS or OSX systems in Ruby, which I happen to use sometimes.
 
 I can also just build better command-line applications with this interface, since I really enjoy building command-line application in Ruby. Maybe you'll find it useful too. 
