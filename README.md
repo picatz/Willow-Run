@@ -46,13 +46,15 @@ require 'willow_run'
 # get current wireless status
 info = WillowRun::Status.new.getinfo
 
-# note: osx/macOS totally failes and gives invalid/faulty BSSID values for this command
+# note: osx/macOS totally fails and gives invalid/faulty BSSID values for this command
 info.bssid
 # => "6c:b0:ce:0b:ec:56"
 
+# but generally, everything is fine and dandy!
 info.ssid
 # => "NETGEAR52"
 
+# and things should generally be Integers when appropriate
 info.channel
 # => 11
 
