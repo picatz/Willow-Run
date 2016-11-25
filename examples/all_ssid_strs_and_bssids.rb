@@ -7,15 +7,17 @@ scanner = WillowRun::Scanner.new
 # scan with that scanner object
 # but only get the first access point
 # if it exists
-ap = scanner.scan.data[0] || false
+ap_data = scanner.scan.data
 
-# if there is any data to work with
-if ap
-  ap.data.each_pair do |key,value|
-    puts "#{key} : #{value}"
+unless ap_data.empty?
+  puts "-" * 40
+  puts "%-20s |\t%s" % [ "BSSID", "SSID" ]
+  puts "-" * 40
+  ap_data.each do |access_point|
+    data = access_point.data
+    puts "%-20s |\t%s" % [ data.bssid, data.ssid_str ]
   end
 else
-  # otherwise just error out
   puts "Unable to find any access points!"
   exit 1  
 end
