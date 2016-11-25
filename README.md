@@ -10,7 +10,7 @@ I can also just build better command-line applications with this interface, sinc
 
 ### Why The Name?
 
-[Willow Run](https://en.wikipedia.org/wiki/Willow_Run_Airport) is an airport located in near Ypsilanti, Michigan. I go to school at [Eastern Michigan University](https://www.emich.edu/) which is also in Ypsilanti. So, it all works out like that.
+[Willow Run](https://en.wikipedia.org/wiki/Willow_Run_Airport) is an airport located in Ypsilanti, Michigan. I go to school at [Eastern Michigan University](https://www.emich.edu/) which is also in Ypsilanti. So, it all works out like that.
 
 ![airport](https://upload.wikimedia.org/wikipedia/commons/3/34/Willow_Run_Airport_-_Michigan.jpg)
 
