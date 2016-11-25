@@ -1,3 +1,6 @@
+require 'ostruct'
+require 'plist'
+require 'open3'
 require "willow_run/airport"
 require "willow_run/access_point"
 require "willow_run/generate_psk"
@@ -6,11 +9,6 @@ require "willow_run/parser"
 require "willow_run/status"
 require "willow_run/errors"
 require "willow_run/version"
-require 'pry'
-require 'ostruct'
-require 'plist'
-require 'open3'
-require 'nokogiri'
 
 module WillowRun
  
