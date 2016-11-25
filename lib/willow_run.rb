@@ -5,7 +5,6 @@ require 'socket'
 require 'packetfu'
 require 'plist'
 require 'ipaddr'
-require 'pry'
 require "willow_run/airport"
 require "willow_run/access_point"
 require "willow_run/generate_psk"
