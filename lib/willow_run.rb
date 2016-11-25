@@ -1,7 +1,9 @@
 require "willow_run/airport"
 require "willow_run/access_point"
+require "willow_run/generate_psk"
 require "willow_run/scanner"
 require "willow_run/parser"
+require "willow_run/status"
 require "willow_run/errors"
 require "willow_run/version"
 require 'pry'
@@ -27,7 +29,7 @@ module WillowRun
   # set_channel() allows a user to set a
   # arbitrary channel on the card.
   def self.set_channel(channel)
-    o, s = Open3.capture2("#{AIRPORT} -c #{channel.to_s}")
+    o, s = Open3.capture2("#{AIRPORT} -c #{channel}")
     s.success? ? true : false
   end
 
