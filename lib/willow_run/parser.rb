@@ -1,5 +1,19 @@
 module WillowRun
 
+  # Parser contains the logic to do with parsing xml/plist
+  # data for this gem. The parsed data is avaiable via
+  # the data attribute which should contain an array
+  # of AccessPoint objects after parsing. 
+  # 
+  # == Example
+  #
+  #  # Typical use for the Parser class
+  #  parser = WillowRun::Parser.new.parse(plist_xml_data)
+  #  parser.data.count
+  #  # => 1
+  #  parser.data[0]
+  #  # => WillowRun::AccessPoint object
+  # 
   class Parser 
     # data contains all of the access points
     # that are parsed with this class.

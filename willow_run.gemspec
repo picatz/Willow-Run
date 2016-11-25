@@ -9,19 +9,10 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Kent Gruber"]
   spec.email         = ["kgruber1@emich.edu"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Willow Run is a Ruby API to the macOS/OSX airport command providing various wireless utilities.}
+  spec.description   = %q{Willow Run is a Ruby API to the macOS/OSX airport command providing various wireless utilities. The airport command manages 802.11 interfaces, can perform wireless broadcast scans ( with xml/plist output support ), set arbitrary channels on the interface, and even generate PSKs from specified pass phrases and SSIDs -- all from the command-line, which I really love. }
+  spec.homepage      = "https://github.com/picatz/Willow-Run"
   spec.license       = "MIT"
-
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})

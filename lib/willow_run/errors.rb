@@ -5,7 +5,7 @@ module WillowRun
   # == Example
   #
   #  # Typical use case
-  #  raise WillowRunError("This is a custom error!")
+  #  raise WillowRunError.new("This is a custom error!")
   #
 	class WillowRunError < StandardError
     attr_reader :problem

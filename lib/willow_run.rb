@@ -24,5 +24,26 @@ module WillowRun
     Open3.capture2(AIRPORT).last.success?
   end
 
+  # set_channel() allows a user to set a
+  # arbitrary channel on the card.
+  def self.set_channel(channel)
+    o, s = Open3.capture2("#{AIRPORT} -c #{channel.to_s}")
+    s.success? ? true : false
+  end
+
+  # disassociate() allows a user to simply
+  # disassociate from any network, requiring
+  # root/sudo privilleges
+  def self.disassociate
+    unless Process.uid == 0
+      o, s = Open3.capture2("#{AIRPORT} -z")
+      #binding.pry
+      unless o == "root required to disassociate\n"
+        return true
+      end
+      raise WillowRunError.new(o)
+      false  
+    end
+  end
 
 end
