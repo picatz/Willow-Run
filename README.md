@@ -8,7 +8,7 @@ Willow Run is a Ruby API to the macOs/OSX `airport` command. The [airport](http:
 
 ## Installation
 
-It will be  a [gem](https://rubygems.org/)! So, you'll be able to install it yourself pretty easily:
+It's a [gem](https://rubygems.org/)! So, you can install it very easily:
 
     $ gem install willow_run
 
