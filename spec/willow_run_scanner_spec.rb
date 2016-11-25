@@ -3,9 +3,6 @@ require "spec_helper"
 describe WillowRun::Scanner do
   scanner = WillowRun::Scanner.new
   
-  # Since the scanner class went over a little makeover, re-making 
-  # these tests...
-
   context "without a provided ssid" do
     it "can scan without a provided ssid" do
       expect(scanner.scan).not_to be false
