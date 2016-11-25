@@ -2,7 +2,7 @@
 
 ## ⚠️  Still in development! Should have working tests though!
 
-## ⚠️  Note: I've learned that `airport` sometimes dosen't handle BSSID values properly.
+### ⚠️  Note: I've learned that `airport` sometimes dosen't handle BSSID values properly.
 
 Willow Run is a Ruby API to the macOs/OSX `airport` command. The [airport](http://osxdaily.com/2007/01/18/airport-the-little-known-command-line-wireless-utility/) command manages 802.11 interfaces, can perform wireless broadcast scans ( with xml output support ), set arbitrary channels on the interface, and even generate PSKs from specified pass phrase and SSIDs -- all from the command-line, which I really love. 
 
