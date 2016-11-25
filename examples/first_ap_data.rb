@@ -7,7 +7,7 @@ scanner = WillowRun::Scanner.new
 # scan with that scanner object
 # but only get the first access point
 # if it exists
-ap = scanner.scan.data[0] || false
+ap = scanner.scan[0] || false
 
 # if there is any data to work with
 if ap
