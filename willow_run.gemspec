@@ -19,7 +19,6 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "plist"
   spec.add_dependency "packetfu"
-  spec.add_dependency "ipaddr"
   
   spec.add_development_dependency "bundler", "~> 1.13"
   spec.add_development_dependency "rake", "~> 10.0"
