@@ -11,3 +11,4 @@ sniffer.sniff(:timeout => 10)
 
 # get the capture file path that was generated
 sniffer.file
+# => /tmp/airportSniff9wFMP4.cap
