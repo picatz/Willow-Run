@@ -27,7 +27,22 @@ I can also just build better command-line applications with this interface, sinc
 
 This gem has lots of different functionality!
 
-### Generate PSK
+### Sniffing
+
+You can access the `airport <interface> sniff <channel>` functionality for sniffing 802.11 frames:
+
+```ruby
+require 'willow_run'
+
+# make new sniffer object that sniffs for 10 seconds
+sniffer = WillowRun::Sniffer.new(:timeout => 10)
+
+# get the capture file path that was generated
+sniffer.file
+# => /tmp/airportSniff9wFMP4.cap
+```
+
+### Generate PSKs
 
 You can use the `airport -P` command to generate a PSK:
 
