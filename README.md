@@ -1,8 +1,6 @@
 # Willow Run ✈️ 
 
-## ⚠️  Still in development! Should have working tests though!
-
-#### ⚠️  Note: I've learned that `airport` sometimes dosen't handle BSSID values properly.
+### ⚠️  Note: I've learned that `airport` sometimes dosen't handle BSSID values properly.
 
 Willow Run is a Ruby API to the macOs/OSX `airport` command. The [airport](http://osxdaily.com/2007/01/18/airport-the-little-known-command-line-wireless-utility/) command manages 802.11 interfaces, can perform wireless broadcast scans ( with xml output support ), set arbitrary channels on the interface, and even generate PSKs from specified pass phrase and SSIDs -- all from the command-line, which I really love. 
 
@@ -51,6 +49,26 @@ require 'willow_run'
 
 WillowRun::GeneratePsk.new.generate(:ssid => "cats", :password => "dogs")
 # => "4e471f8d03afeca8a9d27f6a6358294ce0e89543880fad99498ac457e0b09341"
+``` 
+
+### Full Path to Airport -- and can you run it?
+
+If you ever want to get the full path to the `airport` utility, it can be trickier than you think! For example, `which airport` actually fails. No joke.
+
+```ruby
+require 'willow_run'
+
+# get full path to the airport command
+WillowRun::AIRPORT
+# => "/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
+
+# check that the airport command actually exists
+WillowRun.find_the_airport?
+# => true
+
+# check that you can actually run the command / have the permissions
+WillowRun.take_off?
+# => true
 ``` 
 
 ### Currect Access Point Information
